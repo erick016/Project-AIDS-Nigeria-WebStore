@@ -35,7 +35,7 @@ class Login extends Component {
           // once user is logged in
           // take them to their profile page
           this.props.history.replace(`/profile/${res.data.user._id}`);
-        })
+        })   
         .catch(err => {
             this.setState({serverCheck : "fail"});
           });

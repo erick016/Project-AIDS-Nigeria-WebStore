@@ -71,6 +71,7 @@ app.post('/api/login', (req, res) => {
       }
     });
   }).catch(err => res.status(404).json({success: false, message: "User not found", error: err}));
+  req.body.permissionLevel = user.permissionLevel;
 });
 
 // SIGNUP ROUTE
